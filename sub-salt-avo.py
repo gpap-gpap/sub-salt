@@ -12,7 +12,7 @@ try:
 except ModuleNotFoundError as e:
     sleep_time = 45
     dependency_warning = st.warning(
-        f"Installing dependencies, this takes {sleep_time} seconds."
+        f"Installing mantis dependencies, this takes {sleep_time} seconds."
     )
     subprocess.Popen(
         [
