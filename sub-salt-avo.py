@@ -1,8 +1,8 @@
-import streamlit as st
 import subprocess
 import sys
 import os
 import time
+import streamlit as st
 
 try:
     # replace "yourpackage" with the package you want to import
@@ -13,12 +13,13 @@ except ModuleNotFoundError as e:
     st.write(f"worked to module not found")
     subprocess.Popen(
         [
-            f"{sys.executable} -m pip install git+https://$gpap-gpap:${st.secrets['git_token']}@github.com/gpap-gpap/anisotroPY.git@dev-fAVO"
+            f"{sys.executable} -m pip install git+https://${st.secrets['git_token']}@github.com/gpap-gpap/anisotroPY.git@dev-fAVO"
         ],
         shell=True,
     )
     # wait for subprocess to install package before running your actual code below
     time.sleep(90)
+    dependency_warning.empty()
 
 # Rest of your code goes here
 import MAN.rock_physics as manRP
