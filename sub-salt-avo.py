@@ -10,10 +10,10 @@ try:
 
 # This block executes only on the first run when your package isn't installed
 except ModuleNotFoundError as e:
-    st.write(f"worked to module not found {os.environ['git_token']}")
+    st.write(f"worked to module not found")
     subprocess.Popen(
         [
-            f"{sys.executable} -m pip install git+https://${os.environ['git_token']}@github.com/gpap-gpap/anisotroPY.git@dev-fAVO"
+            f"{sys.executable} -m pip install git+https://${st.secrets['git_token']}@github.com/gpap-gpap/anisotroPY.git@dev-fAVO"
         ],
         shell=True,
     )
@@ -21,7 +21,7 @@ except ModuleNotFoundError as e:
     time.sleep(90)
 
 # Rest of your code goes here
-import mantis.rock_physics as manRP
-import mantis.rock_physics.fluid as manFL
+import MAN.rock_physics as manRP
+import MAN.rock_physics.fluid as manFL
 
-st.write(f"{manRP.__version__}")
+st.write(f"{MAN.__version__}")
