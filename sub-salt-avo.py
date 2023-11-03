@@ -27,6 +27,7 @@ except ModuleNotFoundError as e:
 # Rest of your code goes here
 import mantis.rock_physics as manRP
 import matplotlib.pyplot as plt
+import numpy as np
 
 plt.style.use("mantis.mantis_plotting")
 well_in = {"Vp": 3000, "Vs": 1500, "Rho": 2.3}
