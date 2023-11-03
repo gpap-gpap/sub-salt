@@ -38,5 +38,5 @@ om = np.linspace(-3, 3, 100)
 
 st.write(f"{model}")
 fig, ax = plt.subplots()
-ax.plot(om, model(om))
+ax.plot(om, model.Cij(omega=om))
 st.pyplot(fig)
