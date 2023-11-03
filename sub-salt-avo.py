@@ -6,7 +6,7 @@ import streamlit as st
 
 try:
     # replace "yourpackage" with the package you want to import
-    import mantis as MAN
+    import mantis
 
 # This block executes only on the first run when your package isn't installed
 except ModuleNotFoundError as e:
@@ -25,7 +25,6 @@ except ModuleNotFoundError as e:
     dependency_warning.empty()
 
 # Rest of your code goes here
-import MAN.rock_physics as manRP
-import MAN.rock_physics.fluid as manFL
+import mantis as MAN
 
 st.write(f"{MAN.__version__}")
