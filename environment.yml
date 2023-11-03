@@ -1,0 +1,14 @@
+name: sub-salt
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - jupyter
+  - matplotlib
+  - pandas
+  - streamlit
+  - pip
+  - pip:
+      - segyio
+prefix: /Users/gpapageo/opt/anaconda3/envs/sub-salt
