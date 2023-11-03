@@ -4,3 +4,4 @@ xarray
 matplotlib
 pandas
 streamlit
+mantis @ git+https://gpap-gpap:{st.secrets['git_token']}@github.com/gpap-gpap/anisotroPY.git@no-data
