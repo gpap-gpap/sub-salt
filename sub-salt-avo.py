@@ -25,6 +25,13 @@ except ModuleNotFoundError as e:
     dependency_warning.empty()
 
 # Rest of your code goes here
-import mantis as MAN
+import mantis.rock_physics as manRP
+import matplotlib.pyplot as plt
 
-st.write(f"{MAN.__version__}")
+plt.style.use("mantis.mantis_plotting")
+well_in = {"Vp": 3000, "Vs": 1500, "Rho": 2.3}
+model_in = {"Q_sls": 10, "Log_omega_ref": np.log10(35)}
+inputs = {"well": well_in, "model": model_in}
+model = manRP.models(identifier="sls", **inputs)
+
+st.write(f"{model}")
