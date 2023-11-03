@@ -9,5 +9,6 @@ dependencies:
   - matplotlib
   - pandas
   - streamlit
+  - commonmark
   - pip
 prefix: /Users/gpapageo/opt/anaconda3/envs/sub-salt
